@@ -23,7 +23,7 @@
   - **Dual View Modes**: Toggle between **Grid View (Cards)** and **Detailed List View (Table)**, with user preference remembered in `localStorage`.
   - **Direct Download Button**: Quick one-click local copy download button on every card and table row.
 - **Real-Time Collaboration & Presence**:
-  - **Live Presence Heartbeat**: Shows active editors in real-time (`🟢 Editando (Você)` or `👥 Editando por você e mais X pessoas` with tooltips listing active names).
+  - **Live Presence Heartbeat**: Shows active editors in real-time (`🟢 Editing (you)` or `👥 Editing (you) and N users` with tooltips listing active names).
   - **New Version Alerts**: Notifies active users when a colleague saves a newer version on the server (`🔔 [Author] saved a new version. [🔄 Reload to View]`).
 - **Granular Access Control & Specific User Sharing**:
   - `Public (0)`: Viewable by anyone (including non-logged-in visitors in read-only mode).
@@ -63,6 +63,11 @@ cd C:\projects\craftoffice
 ```
 
 ---
+### 📦 Instalação do Plugin no Moodle
+
+1. Copy the directory `craftoffice` to Moodle local plugin's directory `seu_moodle_root/local/craftoffice`.
+2. Login as Administrator.
+3. Access **Site Administration ▸ Plugins** and follow the steps to install/update.
 ---
 
 <a name="português"></a>
@@ -119,7 +124,7 @@ cd C:\projects\craftoffice
 
 1. Copie a pasta `craftoffice` para o seu diretório do Moodle em `seu_moodle_root/local/craftoffice`.
 2. Faça login como Administrador no Moodle.
-3. Acesse **Administração do Site ▸ Notificações** e conclua a atualização do banco de dados.
+3. Acesse **Administração do Site ▸ Plugins** e conclua a instalação/atualização.
 
 ---
 
