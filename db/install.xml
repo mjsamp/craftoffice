@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/craftoffice/db" VERSION="2026033003" COMMENT="XMLDB file for Moodle local/craftoffice"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="local_craftoffice_docs" COMMENT="Stores CraftOffice document metadata and links">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+        <FIELD NAME="title" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Document title" />
+        <FIELD NAME="doctype" TYPE="char" LENGTH="50" NOTNULL="true" DEFAULT="text" SEQUENCE="false" COMMENT="Document type: text/writer, spreadsheet/calc, pdf, presentation" />
+        <FIELD NAME="content" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Textual content or metadata JSON" />
+        <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="User who created/modified" />
+        <FIELD NAME="accesslevel" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false" COMMENT="0: Public, 1: Authenticated, 2: Private, 3: Shared" />
+        <FIELD NAME="menuname" TYPE="char" LENGTH="100" NOTNULL="false" SEQUENCE="false" COMMENT="Optional category or folder" />
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="usermodified" UNIQUE="false" FIELDS="usermodified" />
+        <INDEX NAME="doctype" UNIQUE="false" FIELDS="doctype" />
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="local_craftoffice_locks" COMMENT="Stores active editing locks and presence heartbeats">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+        <FIELD NAME="docid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" />
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" />
+        <FIELD NAME="sesskey" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" />
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="docid" UNIQUE="false" FIELDS="docid" />
+        <INDEX NAME="userid" UNIQUE="false" FIELDS="userid" />
+        <INDEX NAME="sesskey" UNIQUE="false" FIELDS="sesskey" />
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="local_craftoffice_shares" COMMENT="Stores specific user sharing assignments for documents">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+        <FIELD NAME="docid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" />
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" />
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="docid" UNIQUE="false" FIELDS="docid" />
+        <INDEX NAME="userid" UNIQUE="false" FIELDS="userid" />
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
