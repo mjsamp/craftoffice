@@ -92,7 +92,7 @@ Copy-Item "../../dist/web/deckcraft-web-*_bg.wasm" "../../../craftoffice/editor/
 
 1. Copy the `craftoffice` folder into your Moodle installation at `your_moodle_root/local/craftoffice`.
 2. Log in as an Administrator in Moodle.
-3. Go to **Site Administration ▸ Notifications** and complete the database upgrade.
+3. Go to **Site Administration ▸ Plugins** and follow the steps to install/upgrade.
 
 ---
 ---
@@ -185,7 +185,7 @@ Copy-Item "../../dist/web/deckcraft-web-*_bg.wasm" "../../../craftoffice/editor/
 
 1. Copie a pasta `craftoffice` para o seu diretório do Moodle em `seu_moodle_root/local/craftoffice`.
 2. Faça login como Administrador no Moodle.
-3. Acesse **Administração do Site ▸ Notificações** e conclua a atualização do banco de dados.
+3. Acesse **Administração do Site ▸ Plugins** e conclua a instalação/atualização.
 
 ---
 
