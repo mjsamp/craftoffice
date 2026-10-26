@@ -58,7 +58,7 @@
 
 #### Automatic Build Script (PowerShell):
 ```powershell
-cd C:\Users\marcos_1728\PhpstormProjects\craftoffice
+cd C:\projects\craftoffice
 .\build_wasms.ps1
 ```
 
@@ -109,7 +109,7 @@ O **CraftOffice Suite** é uma suíte de produtividade moderna desenvolvida em R
 
 #### Script Automático no PowerShell (Windows):
 ```powershell
-cd C:\Users\marcos_1728\PhpstormProjects\craftoffice
+cd C:\projects\craftoffice
 .\build_wasms.ps1
 ```
 
