@@ -65,7 +65,7 @@ cd C:\projects\craftoffice
 ---
 ### 📦 Plugin Install on Moodle
 
-1. Copy the directory `craftoffice` to Moodle local plugin's directory `seu_moodle_root/local/craftoffice`.
+1. Copy the directory `craftoffice` to Moodle local plugin's directory `your_moodle_root/local/craftoffice`.
 2. Login as Administrator.
 3. Access **Site Administration ▸ Plugins** and follow the steps to install/update.
 ---
